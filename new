@@ -1,0 +1,251 @@
+exp 1 
+
+cd Desktop
+mkdir Git_Lab_Experiment1
+cd Git_Lab_Experiment1
+git init
+ls
+ls -a
+git config --global user.name "Meghana"
+git config --global user.email "meghana@gmail.com"
+echo "This is my first Git experiment" > README.txt
+git status
+git add README.txt
+git status
+git commit -m "Initial commit"
+echo "Git tracks file changes" >> README.txt
+git status
+git add README.txt
+git commit -m "Updated README file"
+git log
+history -a
+
+
+exp 2 
+
+cd path/to/your/folder
+git init
+notepad file1.txt
+git add file1.txt
+git commit -m "Initial commit"
+git branch
+git branch feature-branch
+git checkout feature-branch
+notepad file1.txt
+git add file1.txt
+git commit -m "Added new feature in feature branch"
+git checkout master
+notepad file1.txt
+git add file1.txt
+git commit -m "Updated file in master branch"
+git merge feature-branch
+notepad file1.txt
+git add file1.txt
+git commit -m "Resolved merge conflict"
+git status
+git log
+git branch -d feature-branch
+
+exp 3 
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+cd Desktop
+git clone https://github.com/YourUsername/git-lab-demo.git
+cd git-lab-demo
+notepad main.py
+git add main.py
+git commit -m "Add main.py file"
+git push -u origin main
+git pull origin main
+git status
+git log
+
+exp 4 
+
+cd Desktop
+git clone https://github.com/YourUsername/git-lab-demo.git
+cd git-lab-demo
+git branch feature-update
+git checkout feature-update
+notepad main.py
+git add main.py
+git commit -m "Updated file in feature branch"
+git push origin feature-update
+git checkout main
+git pull origin main
+git status
+git log
+
+exp 5 
+
+cd ~
+mkdir DevOps_Exp5
+cd DevOps_Exp5
+git init
+git status
+echo "Git Tagging Experiment" > file1.txt
+git add file1.txt
+git commit -m "Initial commit for tagging experiment"
+git log --oneline
+git tag -a v1.0 -m "Version 1.0 release"
+git tag
+git show v1.0
+git remote add origin https://github.com/USERNAME/DevOps_Exp5.git
+git push origin master
+git push origin v1.0
+git push --tags
+
+exp  6
+
+java --version
+mvn --version
+cd %USERPROFILE%\Desktop
+mkdir project
+cd project
+mkdir maven-project
+cd maven-project
+mvn archetype:generate
+cd maven-demo
+dir
+mvn clean package
+cd target
+dir
+
+// ================= PROGRAMS =================
+
+// HELLO
+package org.bnm.demo;
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+
+// LENGTH
+package org.bnm.demo;
+public class App {
+    public static void main(String[] args) {
+        String s = "DevOps";
+        System.out.println("Length of string: " + s.length());
+    }
+}
+
+// AREA
+package org.bnm.demo;
+public class App {
+    public static void main(String[] args) {
+        int side = 5;
+        int area = side * side;
+        System.out.println("Area of square: " + area);
+    }
+}
+
+// EVENODD
+package org.bnm.demo;
+public class App {
+    public static void main(String[] args) {
+        int n = 10;
+        if (n % 2 == 0)
+            System.out.println("Even number");
+        else
+            System.out.println("Odd number");
+    }
+}
+
+// INTEREST
+package org.bnm.demo;
+public class App {
+    public static void main(String[] args) {
+        int p = 1000, t = 2, r = 5;
+        int si = (p * t * r) / 100;
+        System.out.println("Simple Interest: " + si);
+    }
+}
+
+// BANKSERVICE
+public class BankService {
+    public static void main(String[] args) {
+        double balance = 1000;
+        double depositAmount = 500;
+        double withdrawAmount = 200;
+
+        System.out.println("Initial balance: " + balance);
+
+        balance += depositAmount;
+        System.out.println("After depositing " + depositAmount + ", balance is: " + balance);
+
+        if (withdrawAmount > balance) {
+            System.out.println("Cannot withdraw " + withdrawAmount + ", insufficient balance!");
+        } else {
+            balance -= withdrawAmount;
+            System.out.println("After withdrawing " + withdrawAmount + ", balance is: " + balance);
+        }
+
+        System.out.println("Final balance: " + balance);
+    }
+}
+
+
+exp 9 and 10 
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing the project'
+            }
+        }
+    }
+}
+
+
+pipeline {
+    agent any
+    stages {
+        stage('Addition') {
+            steps {
+                script {
+                    int a = 10
+                    int b = 20
+                    int sum = a + b
+                    echo "Addition of ${a} and ${b} is ${sum}"
+                }
+            }
+        }
+    }
+}
+
+
+failure code analysing 
+
+pipeline {
+    agent any
+    stages {
+        stage('Addition') {
+            steps {
+                script {
+                    int x = 5
+                    int y = 7
+                    echo "Sum = ${x + y}"
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                error 'Addition test failed'
+            }
+        }
+    }
+}
+
+jenkins python 
+
+cd /d C:\Users\megha\Desktop\Jenkins_Python
+"C:\Users\megha\AppData\Local\Programs\Python\Python310\python.exe" even_odd.py
